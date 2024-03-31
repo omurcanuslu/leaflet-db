@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// <----------  DB veri tanýmlarý---------------->
+// <----------  DB veri type tanÄ±mlarÄ±---------------->
 const PointCoordinatesSchema  = new Schema({
   lng: {
     type: Number,
