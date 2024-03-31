@@ -9,7 +9,7 @@ mongoose.connect(process.env.MONGODB_URI);
 app.use(express.json());
 app.use(cors());
 
-// <----------  Tüm Koordinatlar Endpoint---------------->
+// <----------  TÃ¼m Koordinatlar Endpoint---------------->
 app.get("/coordinates", async (req, res) => {
   try {
     const coordinates = await PointCoordinates.find();
@@ -37,9 +37,9 @@ app.delete("/coordinates/:id", async (req, res) => {
   try {
     const result = await PointCoordinates.deleteOne({ _id: req.params.id });
     if (result.deletedCount === 0) {
-      return res.status(404).json({ msg: "Koordinat bulunamadý" });
+      return res.status(404).json({ msg: "Koordinat bulunamadÄ±" });
     }
-    res.json({ msg: "Koordinat baþarýyla silindi" });
+    res.json({ msg: "Koordinat baÅŸarÄ±yla silindi" });
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error");
